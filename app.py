@@ -12,7 +12,7 @@ st.session_state["messages"] = [{"role": "assistant", "content": "How can I help
 
 completion = client.chat.completions.create(
   model="deepseek-ai/deepseek-r1",
-  messages=[{"role":"user","content":"breif about brave browser"}],
+  messages=[{"role":"user","content":"explain me about electric cars in 5 lines only"}],
   temperature=0.6,
   top_p=0.7,
   max_tokens=4096,
