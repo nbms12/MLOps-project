@@ -6,6 +6,8 @@ name: Python application
 on:
   push:
     branches: [ "main" ]
+    paths-ignore:
+      - 'kubernetes/deployment.yaml'
   pull_request:
     branches: [ "main" ]
 
