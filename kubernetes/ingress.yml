@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: mlopsapp-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    # Add additional annotations as needed for your specific ingress controller
+    # nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: mlopsapp.example.com  # Replace with your actual domain
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: mlops-app
+            port:
+              number: 80
